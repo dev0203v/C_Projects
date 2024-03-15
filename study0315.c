@@ -262,52 +262,46 @@
 // return 0;
 // }
 
-/* 문자를 만날 때까지 입력을 읽는 프로그램을 작성하라. 각각의 입력 문자와 그 문자에 해당하는
-ASKII 코드값을 10진수로 출력하라. 이 문자 - 코드 쌍을 한 라인당 8개 출력하라 */
+// /* 문제02. 문자를 만날 때까지 입력을 읽는 프로그램을 작성하라. 각각의 입력 문자와 그 문자에 해당하는
+// ASKII 코드값을 10진수로 출력하라. 이 문자 - 코드 쌍을 한 라인당 8개 출력하라 */
 
 // #include <stdio.h>
 // int main(void)
 // {
 //     char ch;
 //     int ch_cnt=0;
-//     int a = 0;
 
-//     printf("문자를 입력하시오(끝내려면 #):\n");
-//     while ((ch = getchar()) != '#' )
-//     {  
-//             while (ch_cnt <= 8)
+//     printf("문자를 입력하시오:\n");
+//     while ((ch = getchar()) != '\n' ) //개행되기 전까지 와일문 반복
+//     {   
+//         if(ch != ' ')  // 스페이스를 포함 안하기 위한 조건
+//         {
+//             printf(" %c : %d ",ch,ch); //문자 : 아스키코드 출력
+//             ch_cnt++;  // 증감식을써서
+//             if (ch_cnt == 8) // 8개가 되면
 //             {
-//                 if(ch != ' ')
-//                     printf("[%c : %d]",ch,ch);
-//                     ch_cnt++;
-                
+//                 printf("\n"); // 개행해라
+//                 ch_cnt = 0; // 다시 반복 시키기 위해서 초기화
 //             }
-             
+//         }
 //     }
-//     printf("\n");
 // return 0;
 // }
 
+// /* 문제03. 0을 입력할 때까지 정수들을 읽는 프로그램을 작성하라.
+// 입력이 종료된 후, 프로그램은 입력된 정수 중에서 
+// 짝수(0은 제외)의개수와 평균, 홀수의 개수와 평균을 보고해야한다*/
 
-#include <stdio.h>
-int main(void)
-{
-    char ch;
-    int ch_cnt=0;
-    int a = 0;
+// #include <stdio.h>
+// int main(void)
+// {
+//     int a;
 
-    printf("문자를 입력하시오(끝내려면 #):\n");
-    while ((ch = getchar()) != '#' )
-    {  
+//     printf("정수를 입력하시오:\n");
+//     scanf("%d",&a);
+//     printf("%d",a);
 
-       printf(" %c : %d ",ch,ch); 
-       ch_cnt++;
-       if (ch_cnt == 8)
-       {
-            printf("\n");
-       }
-             
-    }
-return 0;
-}
 
+// return 0;
+
+// }
