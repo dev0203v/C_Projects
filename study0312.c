@@ -230,7 +230,7 @@
 //     scanf("%s",&name);
 //     printf("성을 입력하시오: ");
 //     scanf("%s",&lastname);
-//     printf("\n네, 안녕하세요 %s%s씨\n",lastname,name);
+//     printf("\n네, 안녕하세요 %s %s씨\n",lastname,name);
 
 //     return 0;
 // }
