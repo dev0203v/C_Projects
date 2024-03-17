@@ -189,8 +189,8 @@
 //     printf("합을 구할 정수를 하나 입력하시오");
 //     printf("(끝내려면 q): ");
 //     status = scanf("%ld",&num);
-//     while (status = 1)
-//     {
+//     while (status = 1) // 대입연산자이기에 while 1이 되어버려 무한루프
+//     {                   // status == 1로 써야한다
 //         sum = sum + num;
 //         printf("다음 정수를 입력하시오(끝내려면 q): ");
 //         status = scanf("%ld",&num);
@@ -249,7 +249,7 @@
 // return 0;
 // }
 
-// 정삼각형 
+// //정삼각형 
 // #include <stdio.h>
 // int main(void)
 // {
@@ -373,57 +373,44 @@
 //     return 0;
 // }
 
-// 화살표
-#include <stdio.h>
-int main(void)
-{
-    int i = 0;
-    int j = 4;
-    int k = 0;
-
-    int a = 0;
-    int b = 0;
-    int c = 1;
-    // printf("정수를 입력해주세요: ");
-    // scanf("%d",&i);
-
-    while (i < 5){
-        k=0; j = 4;
-        while (j>=i)
-        {
-            printf(" ");
-           j--;
-        }
-        while (k<=i)
-        {
-            printf(" *");
-           k++;
-        }
-        printf("\n"); 
-        i++;
-    }
-    while (c>5)
-    {
-    
-    while (a++<1)
-    {
-        printf(" 0 ");
-        
-    }
-    
-    while (b++<1)
-    {
-        printf(" * * *");
-    }
-    
-     printf("\n");
-  
-    }
-    c++;
-    
-        
-return 0;
-}
+// // 화살표
+// #include <stdio.h>
+// int main(void)
+// {
+//     int i = 0;
+//     int j = 4;
+//     int k = 0;
+//     int a = 0;
+//     int b = 0;
+//     while (i < 5){
+//         k=0; j = 4;
+//         while (j>=i)
+//         {
+//             printf(" ");
+//            j--;
+//         }
+//         while (k<=i)
+//         {
+//             printf(" *");
+//            k++;
+//         }
+//         printf("\n"); 
+//         i++;
+//     }
+//     while (a<=3)
+//     {   b=0;
+//         printf("    ");
+//         a++;
+//         while (b<2)
+//         {
+//             printf(" *");
+//             b++;
+//         }    
+//         printf("\n");
+//     }
+//      printf("\n"); 
+// return 0;
+// }
 
 
 

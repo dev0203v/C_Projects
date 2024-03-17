@@ -91,31 +91,34 @@
 //     float min = MAX;
 //     float max = MIN;
 
-//     printf("첫 번째 스코어를 입력하시오 (끝내려면 q): ");
-//     while (scanf("%f",&score) == 1 )
+//      printf("첫 번째 스코어를 입력하시오 (끝내려면 q): ");
+//     while (scanf("%f", &score) == 1) 
 //     {
-//         if (score < MIN || score > MAX)
+//         if (score < MIN || score > MAX) 
 //         {
-//             printf("%0.1f: 우효한 값이 아닙니다. 다시 입력하시오: ",score);
-//             continue; 
+//             printf("%0.1f: 유효한 값이 아닙니다. 다시 입력하시오: ", score);
+//             continue;
 //         }
+//         printf("%0.1f: 유효한 값입니다.\n", score);
+//         min = (score < min) ? score : min;
+//         max = (score > max) ? score : max;
+//         total += score;
+//         n++;
+//         printf("다음 스코어를 입력하시오 (끝내려면 q): ");
 //     }
-//     printf("%0.1f: 유효한 값입니다.\n",score);
-//     min = (score < min) ? score: min;
-//     max = (score > max) ? score: max;
-//     total += score;
-//     n++;
-//     printf("다음 스코어를 입력하시오(끝내려면 q): ");
-    
-//         if (n>0)
-//         {
-//         printf("스코어 %d개의 평균은 %0.1f입니다.\n",n,total/n);
-//         printf("최저 = %0.1f, 최고 = %0.1f\n",min,max);
-//         }
-//         else
-//             printf("유효한 값을 전혀 입력하지 않았습니다.\n");
-// return 0;    
-// }       
+
+//     if (n > 0) 
+//     {
+//         printf("스코어 %d개의 평균은 %0.1f입니다.\n", n, total / n);
+//         printf("최저 = %0.1f, 최고 = %0.1f\n", min, max);
+//     } 
+//     else 
+//     {
+//         printf("유효한 값을 전혀 입력하지 않았습니다.\n");
+//     }
+
+//     return 0;
+// }
 
 // /* break.c -- 루프를 벗어나기 위해 break를 사용한다 */ 
 // #include <stdio.h>
@@ -131,8 +134,8 @@
 //         if (scanf("%f",&width) != 1 )
 //             break;
 //         printf("너비 = %0.2f:\n",width);
-//         printf("넓이 = %0.2f:\n",length*width);
-//         printf("사각형의 길이를 입력하시오:\n");
+//         printf("넓이 = %0.2f:\n",length *width);
+//         printf("사각형의 길이를 입력하시오:\n"); 
 //     }
 //     printf("종료!\n");
 
@@ -274,7 +277,7 @@
 //     {   
 //         if(ch != ' ')  // 스페이스를 포함 안하기 위한 조건
 //         {
-//             printf(" %c : %d ",ch,ch); //문자 : 아스키코드 출력
+//             printf(" %c : %d |",ch,ch); //문자 : 아스키코드 출력
 //             ch_cnt++;  // 증감식을써서
 //             if (ch_cnt == 8) // 8개가 되면
 //             {
@@ -323,39 +326,39 @@
 
 // }
 
-/* # 문자를 만날 때까지 입력을 읽고, if else문을 사용하여
-마침표는 느낌표로, 느낌표는 느낌표 두 개로 대체하고, 대체한 횟수를 
-끝에 출력하는 프로그램을 작성하라.*/
+// /* # 문자를 만날 때까지 입력을 읽고, if else문을 사용하여
+// 마침표는 느낌표로, 느낌표는 느낌표 두 개로 대체하고, 대체한 횟수를 
+// 끝에 출력하는 프로그램을 작성하라.*/
 
-#include <stdio.h>
-int main (void)
-{
-    char ch;
-    int p_cnt=0,cnt=0;
+// #include <stdio.h>
+// int main (void)
+// {
+//     char ch;
+//     int p_cnt=0,cnt=0;
     
 
-    printf("간단한 영문 텍스트를 입력하시오(끝내려면 #):\n");
-    while ((ch = getchar()) != '#')
-    {
-        if(ch == '.')
-        {
-            ch = '!';
-            p_cnt++;
+//     printf("간단한 영문 텍스트를 입력하시오(끝내려면 #):\n");
+//     while ((ch = getchar()) != '#')
+//     {
+//         if(ch == '.')
+//         {
+//             ch = '!';
+//             p_cnt++;
 
-        }
-        else if (ch == '!')
-        {
-            ch = 0;
-            printf("!!");
-            cnt++;
-        }
-        else ch = ch;
+//         }
+//         else if (ch == '!')
+//         {
+//             ch = 0;
+//             printf("!!");
+//             cnt++;
+//         }
+//         else ch = ch;
 
-    printf("%c",ch);
+//     printf("%c",ch);
     
-    }
-    printf("\n%d번 대체 되었습니다.",cnt+p_cnt);
+//     }
+//     printf("\n%d번 대체 되었습니다.",cnt+p_cnt);
     
-return 0;
+// return 0;
 
-}
+// }
