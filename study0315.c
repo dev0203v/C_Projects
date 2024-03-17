@@ -57,8 +57,6 @@
 
 //         return 0;
 //     }
-    
-
 // }
 
 // /* paint.c -- 조건 연산자를 사용한다    */
@@ -116,7 +114,7 @@
 //         }
 //         else
 //             printf("유효한 값을 전혀 입력하지 않았습니다.\n");
-//         return 0;    
+// return 0;    
 // }       
 
 // /* break.c -- 루프를 벗어나기 위해 break를 사용한다 */ 
@@ -294,14 +292,70 @@
 
 // #include <stdio.h>
 // int main(void)
+
 // {
-//     int a;
-
-//     printf("정수를 입력하시오:\n");
-//     scanf("%d",&a);
-//     printf("%d",a);
-
+//     int a = 0,cnt_a = 0,cnt_b = 0;
+//     float sum_a = 0,sum_b=0;
+    
+//     printf("정수를 입력하시오(종료하려면 0):\n");
+//     while((scanf("%d",&a)) != 0)
+//     {    
+//         if (a == 0) 
+//         {
+//             break; // 0을 입력하면 반복문 종료
+//         }
+//         else if(a%2==0)
+//         {   
+//             cnt_a++;
+//             sum_a+=a;
+            
+//         }
+//         else
+//             cnt_b++;
+//             sum_b+=a;
+            
+//     }
+    
+// printf("짝수의 개수는 %d개 평균은: %0.2f\n",cnt_a,sum_a/cnt_a);
+// printf("홀수의 개수는 %d개 평균은: %0.2f\n",cnt_b,sum_b/cnt_b);
 
 // return 0;
 
 // }
+
+/* # 문자를 만날 때까지 입력을 읽고, if else문을 사용하여
+마침표는 느낌표로, 느낌표는 느낌표 두 개로 대체하고, 대체한 횟수를 
+끝에 출력하는 프로그램을 작성하라.*/
+
+#include <stdio.h>
+int main (void)
+{
+    char ch;
+    int p_cnt=0,cnt=0;
+    
+
+    printf("간단한 영문 텍스트를 입력하시오(끝내려면 #):\n");
+    while ((ch = getchar()) != '#')
+    {
+        if(ch == '.')
+        {
+            ch = '!';
+            p_cnt++;
+
+        }
+        else if (ch == '!')
+        {
+            ch = 0;
+            printf("!!");
+            cnt++;
+        }
+        else ch = ch;
+
+    printf("%c",ch);
+    
+    }
+    printf("\n%d번 대체 되었습니다.",cnt+p_cnt);
+    
+return 0;
+
+}
