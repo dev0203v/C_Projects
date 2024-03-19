@@ -27,7 +27,7 @@ printf("\n========== 게임을 시작 합니다 ==========\n");
             turn++;
          
             printf("경험치를 %f 획득하였습니다.\n",turn_rand);
-            if (turn == 6)
+            if (turn == 5)
             {   
                 event_rand = 1.0 + (float)rand() / ((float)RAND_MAX / 4.0);
                 now_exp = total_exp * event_rand;
@@ -73,7 +73,7 @@ printf("\n========== 게임을 시작 합니다 ==========\n");
                             printf("============= Bad Ending =============\n\n");
                             printf("\n\n\n");
                             game_cnt = 0;
-                            break
+                            
                         }
                         else if (nowlevel == 0)
                         {
@@ -87,7 +87,7 @@ printf("\n========== 게임을 시작 합니다 ==========\n");
                             printf("============= Knock Down =============\n\n");
                             printf("\n\n\n");
                             game_cnt = 0;
-                            break;
+                            
                         }
                        
                     }
