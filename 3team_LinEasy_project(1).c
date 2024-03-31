@@ -25,7 +25,7 @@ int main(){
 }
 
 
-void Mon(){
+void Mon(struct monster*){
     
     srand(time(NULL));
     int i;
@@ -64,7 +64,7 @@ void Mon(){
 
     for ( i = 0; i < 5; i++)
     {
-        printf("%s %s 쳬력: %d 데미지: %d 골드획득: %d\n",monster[i]->mon_name,monster[i]->mon_T,monster[i]->mon_HP,monster[i]->mon_dem,monster[i]->golddrop);
+        printf("%s %s 쳬력: %d 데미지: %d 골드획득: %d\n",(monster + i)->mon_name,(monster + i)->mon_T,(monster + i)->mon_HP,(monster + i)->mon_dem,(monster + i)->golddrop);
     }; // 구조체 포인터 이해도 부족으로 완성하지 못함
     // 다시 공부하고 수정할것 
     
