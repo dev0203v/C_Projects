@@ -4,7 +4,7 @@
 #include <string.h>
 
 #define NAMELEN 20
-#define NUM_MONSTERS 8 
+#define NUM_MONSTERS 9 
 
 typedef struct monster {
     char mon_name[NAMELEN];
@@ -20,6 +20,13 @@ int main() {
     srand(time(NULL));
     int i;
     int User_HP = 100;
+    char class_name[][10] = {
+        "유시온", "김승수", "권철민", "안광민", "강진영",
+        "김영곤", "박선후", "김건", "이준호", "이철", "이동준",
+        "황은비", "조세빈", "김성근", "이은승", "박희정", "박장미",
+        "김민아", "조대정", "김재신", "박민건", "임석현", "황운하",
+        "노주영", "김혜빈", "서훈", "오은지"
+    };
 
     monster m[NUM_MONSTERS];
 
@@ -52,24 +59,30 @@ int main() {
     m[4].mon_HP = rand()%360 + 260;
     m[4].mon_dem = rand()%75 + 32;
     m[4].gold_drop = rand()%200 + 5;
+    
+    strcpy(m[5].mon_name, class_name[rand()%27]);
+    strcpy(m[5].mon_T, "네임드");
+    m[5].mon_HP = User_HP*2;
+    m[5].mon_dem = rand()%300 + 100;
+    m[5].gold_drop = rand()%500 + 5;
 
-    strcpy(m[5].mon_name, "바포매트");
-    strcpy(m[5].mon_T, "보스");
-    m[5].mon_HP =  User_HP*5;
-    m[5].mon_dem = rand()%450+180;
-    m[5].gold_drop = rand()%700+5;
+    strcpy(m[6].mon_name, "바포매트");
+    strcpy(m[6].mon_T, "보스");
+    m[6].mon_HP =  User_HP*5;
+    m[6].mon_dem = rand()%450+180;
+    m[6].gold_drop = rand()%700+5;
 
-    strcpy(m[6].mon_name, "이동녘");
-    strcpy(m[6].mon_T, "찐보스");
-    m[6].mon_HP =  User_HP*7;
-    m[6].mon_dem = rand()%550+300;
-    m[6].gold_drop = rand()%1000+5;
+    strcpy(m[7].mon_name, "이동녘");
+    strcpy(m[7].mon_T, "찐보스");
+    m[7].mon_HP =  User_HP*7;
+    m[7].mon_dem = rand()%550+300;
+    m[7].gold_drop = rand()%1000+5;
 
-    strcpy(m[7].mon_name , "류홍걸");
-    strcpy(m[7].mon_T, "찐막보스");
-    m[7].mon_HP =  User_HP*10;
-    m[7].mon_dem = rand()%1300+500;
-    m[7].gold_drop = rand()%3000+5;
+    strcpy(m[8].mon_name , "류홍걸");
+    strcpy(m[8].mon_T, "찐막보스");
+    m[8].mon_HP =  User_HP*10;
+    m[8].mon_dem = rand()%1300+500;
+    m[8].gold_drop = rand()%3000+5;
     
 
     for (i = 0; i < NUM_MONSTERS; i++) {
